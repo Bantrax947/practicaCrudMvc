@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practicaCurdMvc", "practicaCurdMvc\practicaCurdMvc.csproj", "{6A2EABA9-D3A1-4069-90CC-6EB6F241B689}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practicaCrudMvc", "practicaCurdMvc\practicaCrudMvc.csproj", "{6A2EABA9-D3A1-4069-90CC-6EB6F241B689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
