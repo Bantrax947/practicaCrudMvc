@@ -8,6 +8,7 @@ namespace practicaCurdMvc
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new Filters.vefifySession());//se da de alta la clase para que se ejecute
         }
     }
 }
