@@ -17,5 +17,8 @@ namespace practicaCurdMvc.Models
         public int id { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+        public Nullable<int> idState { get; set; }
+    
+        public virtual cstate cstate { get; set; }
     }
 }

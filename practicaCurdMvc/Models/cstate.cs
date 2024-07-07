@@ -14,7 +14,16 @@ namespace practicaCurdMvc.Models
     
     public partial class cstate
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public cstate()
+        {
+            this.Usuario = new HashSet<Usuario>();
+        }
+    
         public int id { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

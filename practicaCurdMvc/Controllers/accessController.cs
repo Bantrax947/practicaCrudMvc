@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using practicaCurdMvc.Models;
 
 namespace practicaCurdMvc.Controllers
 {
@@ -17,7 +19,25 @@ namespace practicaCurdMvc.Controllers
         {
             try
             {
-                return Content("1");
+                using (practicaMvcEntity db= new practicaMvcEntity())
+                {
+                    var lst = from d in db.Usuario
+                              where d.email == user && d.password == password && d.idState == 1
+                              select d;
+
+                    if (lst.Count() > 0) {
+                        
+                        Session["User"] =lst.First();
+                        return Content("1");
+
+                    }
+                    else
+                    {
+                        return Content("Usuario No Aceptado");
+                    }
+                }
+
+              
             }
             catch (Exception ex)
             {
